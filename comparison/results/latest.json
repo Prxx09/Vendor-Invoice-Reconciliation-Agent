@@ -1,0 +1,162 @@
+{
+  "sample_invoice.pdf": {
+    "local_parser_then_llm": {
+      "result": {
+        "invoice_number": "INV-2026-0042",
+        "invoice_date": "2026-05-20",
+        "due_date": "2026-06-19",
+        "billing_period": null,
+        "currency": "EUR",
+        "subtotal": "1650.00",
+        "tax_amount": "346.50",
+        "total": "1996.50",
+        "vendor_name": "Acme Web Services BV",
+        "line_items": [
+          {
+            "description": "Website redesign",
+            "quantity": 1,
+            "unit_price": "1200.00",
+            "amount": "1200.00"
+          },
+          {
+            "description": "Hosting (12 months)",
+            "quantity": 12,
+            "unit_price": "15.00",
+            "amount": "180.00"
+          },
+          {
+            "description": "SEO optimization",
+            "quantity": 3,
+            "unit_price": "90.00",
+            "amount": "270.00"
+          }
+        ]
+      },
+      "local_parse_seconds": 0.029,
+      "llm_seconds": 0.733,
+      "total_seconds": 0.762,
+      "field_accuracy": 100.0,
+      "line_items_correct": true,
+      "matched_fields": 8,
+      "total_fields": 8
+    },
+    "direct_vision_llm": {
+      "result": {
+        "invoice_number": "INV-2026-0042",
+        "invoice_date": "2026-05-20",
+        "due_date": "2026-06-19",
+        "billing_period": null,
+        "currency": "EUR",
+        "subtotal": "1650.00",
+        "tax_amount": "346.50",
+        "total": "1996.50",
+        "vendor_name": "Acme Web Services BV",
+        "line_items": [
+          {
+            "description": "Website redesign",
+            "quantity": 1,
+            "unit_price": "1200.00",
+            "amount": "1200.00"
+          },
+          {
+            "description": "Hosting (12 months)",
+            "quantity": 12,
+            "unit_price": "15.00",
+            "amount": "180.00"
+          },
+          {
+            "description": "SEO optimization",
+            "quantity": 3,
+            "unit_price": "90.00",
+            "amount": "270.00"
+          }
+        ]
+      },
+      "total_seconds": 1.476,
+      "field_accuracy": 100.0,
+      "line_items_correct": true,
+      "matched_fields": 8,
+      "total_fields": 8
+    }
+  },
+  "Sample_Rent_Invoice_INV-2026-09042_exact_layout.pdf": {
+    "local_parser_then_llm": {
+      "result": {
+        "invoice_number": "INV-2026-09042",
+        "invoice_date": "01-Sep-2026",
+        "due_date": "15-Sep-2026",
+        "billing_period": "September 2026",
+        "currency": "INR",
+        "subtotal": "185000.00",
+        "tax_amount": "33300.00",
+        "total": "218300.00",
+        "vendor_name": "ABC Properties Pvt. Ltd.",
+        "line_items": [
+          {
+            "description": "Base Rent",
+            "quantity": 1,
+            "unit_price": "150000.00",
+            "amount": "150000.00"
+          },
+          {
+            "description": "Common Area Maintenance (CAM)",
+            "quantity": 1,
+            "unit_price": "30000.00",
+            "amount": "30000.00"
+          },
+          {
+            "description": "Fit-out Cost Recovery",
+            "quantity": 1,
+            "unit_price": "5000.00",
+            "amount": "5000.00"
+          }
+        ]
+      },
+      "local_parse_seconds": 0.003,
+      "llm_seconds": 34.774,
+      "total_seconds": 34.777,
+      "field_accuracy": 100.0,
+      "line_items_correct": true,
+      "matched_fields": 9,
+      "total_fields": 9
+    },
+    "direct_vision_llm": {
+      "result": {
+        "invoice_number": "INV-2026-09042",
+        "invoice_date": "01-Sep-2026",
+        "due_date": "15-Sep-2026",
+        "billing_period": "September 2026",
+        "currency": "INR",
+        "subtotal": "185000.00",
+        "tax_amount": "33300.00",
+        "total": "218300.00",
+        "vendor_name": "ABC Properties Pvt. Ltd.",
+        "line_items": [
+          {
+            "description": "Base Rent",
+            "quantity": 1,
+            "unit_price": "150000.00",
+            "amount": "150000.00"
+          },
+          {
+            "description": "Common Area Maintenance (CAM)",
+            "quantity": 1,
+            "unit_price": "30000.00",
+            "amount": "30000.00"
+          },
+          {
+            "description": "Fit-out Cost Recovery",
+            "quantity": 1,
+            "unit_price": "5000.00",
+            "amount": "5000.00"
+          }
+        ]
+      },
+      "total_seconds": 1.06,
+      "field_accuracy": 100.0,
+      "line_items_correct": true,
+      "matched_fields": 9,
+      "total_fields": 9
+    }
+  }
+}
