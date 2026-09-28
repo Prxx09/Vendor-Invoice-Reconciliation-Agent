@@ -90,7 +90,7 @@ def parse_groq(document):
         model=os.getenv("GROQ_MODEL","openai/gpt-oss-120b"),
         temperature=0,
         response_format={"type":"json_object"},
-        messages=[{"role":"user","content":SCHEMA_PROMPT.format(document=document)}])
+        messages=[{"role":"user","content":SCHEMA_PROMPT.replace("{document}", document)}])
     return _json(r.choices[0].message.content)
 
 def parse_hf(document):
