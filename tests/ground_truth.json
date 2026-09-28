@@ -1,0 +1,25 @@
+{
+  "sample_invoice.pdf": {
+    "invoice_number": "INV-2026-0042",
+    "invoice_date": "2026-05-20",
+    "due_date": "2026-06-19",
+    "currency": "EUR",
+    "subtotal": "1650.00",
+    "tax_amount": "346.50",
+    "total": "1996.50",
+    "vendor_name": "Acme Web Services BV",
+    "line_item_count": 3
+  },
+  "Sample_Rent_Invoice_INV-2026-09042_exact_layout.pdf": {
+    "invoice_number": "INV-2026-09042",
+    "invoice_date": "01-Sep-2026",
+    "due_date": "15-Sep-2026",
+    "billing_period": "September 2026",
+    "currency": "INR",
+    "subtotal": "185000.00",
+    "tax_amount": "33300.00",
+    "total": "218300.00",
+    "vendor_name": "ABC Properties Pvt. Ltd.",
+    "line_item_count": 3
+  }
+}
