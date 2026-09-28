@@ -96,7 +96,7 @@ def parse_groq(document):
 def parse_hf(document):
     client=InferenceClient(model=os.getenv("HF_MODEL","Qwen/Qwen2.5-72B-Instruct"),token=os.environ["HF_TOKEN"])
     r=client.chat_completion(
-        messages=[{"role":"user","content":SCHEMA_PROMPT.format(document=document)}],
+        messages=[{"role":"user","content":SCHEMA_PROMPT.replace("{document}", document)}],
         temperature=0,
         max_tokens=3000
     )
