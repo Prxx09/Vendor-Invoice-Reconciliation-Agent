@@ -2,7 +2,7 @@ import base64, json, os, re, time
 from pathlib import Path
 import fitz
 from groq import Groq
-from extraction.pdf_extractor import extract_all
+from extraction.pdf_extractor import extract_pymupdf
 
 PROMPT="""Extract the invoice into JSON only. Never invent missing values.
 Use exactly these keys:
@@ -50,8 +50,7 @@ def main():
     out={}
     for name,gt in truth.items():
         pdf=Path("tests/fixtures")/name
-        start=time.perf_counter(); parsed=extract_all(pdf); local_s=time.perf_counter()-start
-        text=max((parsed[k] for k in ("pymupdf","pdfplumber","pypdf2")),key=len)
+        start=time.perf_counter(); text=extract_pymupdf(pdf); local_s=time.perf_counter()-start
         out[name]={}
         try:
             a,llm_s=groq_text(text)
