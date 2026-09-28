@@ -1,162 +1,1373 @@
 {
   "sample_invoice.pdf": {
+    "local_parser_only": {
+      "recoverable_values": 19,
+      "checked_values": 19,
+      "recovery_percent": 100.0,
+      "value_details": [
+        {
+          "field": "document_type",
+          "expected": "INVOICE",
+          "found_locally": true
+        },
+        {
+          "field": "invoice.invoice_number",
+          "expected": "INV-2026-0042",
+          "found_locally": true
+        },
+        {
+          "field": "invoice.invoice_date",
+          "expected": "2026-05-20",
+          "found_locally": true
+        },
+        {
+          "field": "invoice.payment_due_date",
+          "expected": "2026-06-19",
+          "found_locally": true
+        },
+        {
+          "field": "invoice.currency",
+          "expected": "EUR",
+          "found_locally": true
+        },
+        {
+          "field": "seller.name",
+          "expected": "Acme Web Services BV",
+          "found_locally": true
+        },
+        {
+          "field": "line_items[0].description",
+          "expected": "Website redesign",
+          "found_locally": true
+        },
+        {
+          "field": "line_items[0].rate",
+          "expected": 1200.0,
+          "found_locally": true
+        },
+        {
+          "field": "line_items[0].amount",
+          "expected": 1200.0,
+          "found_locally": true
+        },
+        {
+          "field": "line_items[1].description",
+          "expected": "Hosting (12 months)",
+          "found_locally": true
+        },
+        {
+          "field": "line_items[1].rate",
+          "expected": 15.0,
+          "found_locally": true
+        },
+        {
+          "field": "line_items[1].amount",
+          "expected": 180.0,
+          "found_locally": true
+        },
+        {
+          "field": "line_items[2].description",
+          "expected": "SEO optimization",
+          "found_locally": true
+        },
+        {
+          "field": "line_items[2].rate",
+          "expected": 90.0,
+          "found_locally": true
+        },
+        {
+          "field": "line_items[2].amount",
+          "expected": 270.0,
+          "found_locally": true
+        },
+        {
+          "field": "amounts.subtotal",
+          "expected": 1650.0,
+          "found_locally": true
+        },
+        {
+          "field": "amounts.tax.amount",
+          "expected": 346.5,
+          "found_locally": true
+        },
+        {
+          "field": "amounts.total_amount_due",
+          "expected": 1996.5,
+          "found_locally": true
+        },
+        {
+          "field": "amounts.currency",
+          "expected": "EUR",
+          "found_locally": true
+        }
+      ],
+      "text_chars": 1403,
+      "tables_detected": 1,
+      "parse_seconds": 0.56,
+      "raw_text": {
+        "pymupdf": "INVOICE\nAcme Web Services BV\nKeizersgracht 123, 1015 CJ Amsterdam\nVAT: NL001234567B01\nInvoice #: INV-2026-0042\nDate: 2026-05-20\nDue date: 2026-06-19\nBill to:\nGlobex Corporation\n742 Evergreen Terrace, Rotterdam\nDescription\nQty\nUnit price\nAmount\nWebsite redesign\n1\n1200.00\n1200.00\nHosting (12 months)\n12\n15.00\n180.00\nSEO optimization\n3\n90.00\n270.00\nSubtotal: 1650.00\nVAT 21%: 346.50\nTotal: EUR 1996.50\nCurrency: EUR. Payment within 30 days. Thank you for your business!",
+        "pdfplumber": "INVOICE\nAcme Web Services BV Invoice #: INV-2026-0042\nKeizersgracht 123, 1015 CJ Amsterdam Date: 2026-05-20\nVAT: NL001234567B01 Due date: 2026-06-19\nBill to:\nGlobex Corporation\n742 Evergreen Terrace, Rotterdam\nDescription Qty Unit price Amount\nWebsite redesign 1 1200.00 1200.00\nHosting (12 months) 12 15.00 180.00\nSEO optimization 3 90.00 270.00\nSubtotal: 1650.00\nVAT 21%: 346.50\nTotal: EUR 1996.50\nCurrency: EUR. Payment within 30 days. Thank you for your business!",
+        "pypdf2": "INVOICE\nAcme Web Services BV\nKeizersgracht 123, 1015 CJ Amsterdam\nVAT: NL001234567B01\nInvoice #: INV-2026-0042\nDate: 2026-05-20\nDue date: 2026-06-19\nBill to:\nGlobex Corporation\n742 Evergreen Terrace, Rotterdam\nDescription\nQty\nUnit price\nAmount\nWebsite redesign\n1\n1200.00\n1200.00\nHosting (12 months)\n12\n15.00\n180.00\nSEO optimization\n3\n90.00\n270.00\nSubtotal: 1650.00\nVAT 21%: 346.50\nTotal: EUR 1996.50\nCurrency: EUR. Payment within 30 days. Thank you for your business!"
+      },
+      "tables": [
+        [
+          [
+            "INVOICE",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Acme Web Services BV",
+            "",
+            "",
+            "Invoice #: INV-2026-0042"
+          ],
+          [
+            "Keizersgracht 123, 1015 CJ Amsterdam",
+            "",
+            "",
+            "Date: 2026-05-20"
+          ],
+          [
+            "VAT: NL001234567B01",
+            "",
+            "",
+            "Due date: 2026-06-19"
+          ],
+          [
+            "Bill to:",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Globex Corporation",
+            "",
+            "",
+            ""
+          ],
+          [
+            "742 Evergreen Terrace, Rotterdam",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Description",
+            "Qty",
+            "Unit price",
+            "Amount"
+          ],
+          [
+            "Website redesign",
+            "1",
+            "1200.00",
+            "1200.00"
+          ],
+          [
+            "Hosting (12 months)",
+            "12",
+            "15.00",
+            "180.00"
+          ],
+          [
+            "SEO optimization",
+            "3",
+            "90.00",
+            "270.00"
+          ]
+        ]
+      ]
+    },
     "local_parser_then_llm": {
       "result": {
-        "invoice_number": "INV-2026-0042",
-        "invoice_date": "2026-05-20",
-        "due_date": "2026-06-19",
-        "billing_period": null,
-        "currency": "EUR",
-        "subtotal": "1650.00",
-        "tax_amount": "346.50",
-        "total": "1996.50",
-        "vendor_name": "Acme Web Services BV",
+        "document_type": "INVOICE",
+        "document_title": "INVOICE",
+        "invoice": {
+          "invoice_number": "INV-2026-0042",
+          "invoice_date": "2026-05-20",
+          "billing_period": null,
+          "payment_due_date": "2026-06-19",
+          "lease_id": null,
+          "currency": "EUR"
+        },
+        "seller": {
+          "name": "Acme Web Services BV",
+          "address": "Keizersgracht 123, 1015 CJ Amsterdam",
+          "tax_id": "NL001234567B01",
+          "email": null
+        },
+        "buyer": {
+          "name": "Globex Corporation",
+          "department": null,
+          "location_or_store": "Rotterdam",
+          "store_id": null,
+          "address": "742 Evergreen Terrace, Rotterdam"
+        },
         "line_items": [
           {
             "description": "Website redesign",
+            "period": null,
             "quantity": 1,
-            "unit_price": "1200.00",
-            "amount": "1200.00"
+            "rate": 1200.0,
+            "amount": 1200.0
           },
           {
             "description": "Hosting (12 months)",
+            "period": null,
             "quantity": 12,
-            "unit_price": "15.00",
-            "amount": "180.00"
+            "rate": 15.0,
+            "amount": 180.0
           },
           {
             "description": "SEO optimization",
+            "period": null,
             "quantity": 3,
-            "unit_price": "90.00",
-            "amount": "270.00"
+            "rate": 90.0,
+            "amount": 270.0
           }
+        ],
+        "amounts": {
+          "subtotal": 1650.0,
+          "tax": {
+            "label": "VAT",
+            "rate_percent": 21,
+            "amount": 346.5
+          },
+          "total_amount_due": 1996.5,
+          "currency": "EUR"
+        },
+        "payment_instructions": {
+          "bank": null,
+          "account_name": null,
+          "account_number": null,
+          "ifsc_or_routing_code": null
+        },
+        "notes": [
+          "Payment within 30 days.",
+          "Thank you for your business!"
         ]
       },
-      "local_parse_seconds": 0.029,
-      "llm_seconds": 0.733,
-      "total_seconds": 0.762,
+      "local_parse_seconds": 0.56,
+      "llm_seconds": 8.865,
+      "total_seconds": 9.425,
       "field_accuracy": 100.0,
-      "line_items_correct": true,
-      "matched_fields": 8,
-      "total_fields": 8
+      "matched_fields": 23,
+      "total_fields": 23,
+      "field_details": [
+        {
+          "field": "document_type",
+          "expected": "INVOICE",
+          "actual": "INVOICE",
+          "correct": true
+        },
+        {
+          "field": "invoice.invoice_number",
+          "expected": "INV-2026-0042",
+          "actual": "INV-2026-0042",
+          "correct": true
+        },
+        {
+          "field": "invoice.invoice_date",
+          "expected": "2026-05-20",
+          "actual": "2026-05-20",
+          "correct": true
+        },
+        {
+          "field": "invoice.payment_due_date",
+          "expected": "2026-06-19",
+          "actual": "2026-06-19",
+          "correct": true
+        },
+        {
+          "field": "invoice.currency",
+          "expected": "EUR",
+          "actual": "EUR",
+          "correct": true
+        },
+        {
+          "field": "seller.name",
+          "expected": "Acme Web Services BV",
+          "actual": "Acme Web Services BV",
+          "correct": true
+        },
+        {
+          "field": "line_items[0].description",
+          "expected": "Website redesign",
+          "actual": "Website redesign",
+          "correct": true
+        },
+        {
+          "field": "line_items[0].quantity",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "line_items[0].rate",
+          "expected": 1200.0,
+          "actual": 1200.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[0].amount",
+          "expected": 1200.0,
+          "actual": 1200.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[1].description",
+          "expected": "Hosting (12 months)",
+          "actual": "Hosting (12 months)",
+          "correct": true
+        },
+        {
+          "field": "line_items[1].quantity",
+          "expected": 12,
+          "actual": 12,
+          "correct": true
+        },
+        {
+          "field": "line_items[1].rate",
+          "expected": 15.0,
+          "actual": 15.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[1].amount",
+          "expected": 180.0,
+          "actual": 180.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[2].description",
+          "expected": "SEO optimization",
+          "actual": "SEO optimization",
+          "correct": true
+        },
+        {
+          "field": "line_items[2].quantity",
+          "expected": 3,
+          "actual": 3,
+          "correct": true
+        },
+        {
+          "field": "line_items[2].rate",
+          "expected": 90.0,
+          "actual": 90.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[2].amount",
+          "expected": 270.0,
+          "actual": 270.0,
+          "correct": true
+        },
+        {
+          "field": "amounts.subtotal",
+          "expected": 1650.0,
+          "actual": 1650.0,
+          "correct": true
+        },
+        {
+          "field": "amounts.tax.rate_percent",
+          "expected": 21,
+          "actual": 21,
+          "correct": true
+        },
+        {
+          "field": "amounts.tax.amount",
+          "expected": 346.5,
+          "actual": 346.5,
+          "correct": true
+        },
+        {
+          "field": "amounts.total_amount_due",
+          "expected": 1996.5,
+          "actual": 1996.5,
+          "correct": true
+        },
+        {
+          "field": "amounts.currency",
+          "expected": "EUR",
+          "actual": "EUR",
+          "correct": true
+        }
+      ]
     },
     "direct_vision_llm": {
-      "result": {
-        "invoice_number": "INV-2026-0042",
-        "invoice_date": "2026-05-20",
-        "due_date": "2026-06-19",
-        "billing_period": null,
-        "currency": "EUR",
-        "subtotal": "1650.00",
-        "tax_amount": "346.50",
-        "total": "1996.50",
-        "vendor_name": "Acme Web Services BV",
-        "line_items": [
-          {
-            "description": "Website redesign",
-            "quantity": 1,
-            "unit_price": "1200.00",
-            "amount": "1200.00"
-          },
-          {
-            "description": "Hosting (12 months)",
-            "quantity": 12,
-            "unit_price": "15.00",
-            "amount": "180.00"
-          },
-          {
-            "description": "SEO optimization",
-            "quantity": 3,
-            "unit_price": "90.00",
-            "amount": "270.00"
-          }
-        ]
-      },
-      "total_seconds": 1.476,
-      "field_accuracy": 100.0,
-      "line_items_correct": true,
-      "matched_fields": 8,
-      "total_fields": 8
+      "error": "RateLimitError('Error code: 429 - {\\'error\\': {\\'message\\': \"Request too large for model `qwen/qwen3.8-27b` in organization `org_01kj4gab11ea5aj954zfxy25fe` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1073. The request\\'s expected output tokens exceed the enforced limit; reduce max_tokens (or the request\\'s expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\", \\'type\\': \\'tokens\\', \\'code\\': \\'rate_limit_exceeded\\'}}')"
     }
   },
   "Sample_Rent_Invoice_INV-2026-09042_exact_layout.pdf": {
+    "local_parser_only": {
+      "recoverable_values": 39,
+      "checked_values": 39,
+      "recovery_percent": 100.0,
+      "value_details": [
+        {
+          "field": "document_type",
+          "expected": "RENT INVOICE",
+          "found_locally": true
+        },
+        {
+          "field": "document_title",
+          "expected": "Sample Invoice – AI Invoice Processing Demo",
+          "found_locally": true
+        },
+        {
+          "field": "invoice.invoice_number",
+          "expected": "INV-2026-09042",
+          "found_locally": true
+        },
+        {
+          "field": "invoice.invoice_date",
+          "expected": "01-Sep-2026",
+          "found_locally": true
+        },
+        {
+          "field": "invoice.billing_period",
+          "expected": "September 2026",
+          "found_locally": true
+        },
+        {
+          "field": "invoice.payment_due_date",
+          "expected": "15-Sep-2026",
+          "found_locally": true
+        },
+        {
+          "field": "invoice.lease_id",
+          "expected": "LEASE-DEL-042",
+          "found_locally": true
+        },
+        {
+          "field": "invoice.currency",
+          "expected": "INR",
+          "found_locally": true
+        },
+        {
+          "field": "seller.name",
+          "expected": "ABC Properties Pvt. Ltd.",
+          "found_locally": true
+        },
+        {
+          "field": "seller.address",
+          "expected": "12 Business Park, Sector 18\nNew Delhi, India – 110001",
+          "found_locally": true
+        },
+        {
+          "field": "seller.tax_id",
+          "expected": "07AABCA1234F1Z5",
+          "found_locally": true
+        },
+        {
+          "field": "seller.email",
+          "expected": "billing@abcproperties.example",
+          "found_locally": true
+        },
+        {
+          "field": "buyer.name",
+          "expected": "Retail Stores India Pvt. Ltd.",
+          "found_locally": true
+        },
+        {
+          "field": "buyer.department",
+          "expected": "Finance Department",
+          "found_locally": true
+        },
+        {
+          "field": "buyer.location_or_store",
+          "expected": "Delhi Mall – Store DEL-042",
+          "found_locally": true
+        },
+        {
+          "field": "buyer.store_id",
+          "expected": "DEL-042",
+          "found_locally": true
+        },
+        {
+          "field": "buyer.address",
+          "expected": "New Delhi, India",
+          "found_locally": true
+        },
+        {
+          "field": "line_items[0].description",
+          "expected": "Base Rent",
+          "found_locally": true
+        },
+        {
+          "field": "line_items[0].period",
+          "expected": "Sep-2026",
+          "found_locally": true
+        },
+        {
+          "field": "line_items[0].rate",
+          "expected": 150000.0,
+          "found_locally": true
+        },
+        {
+          "field": "line_items[0].amount",
+          "expected": 150000.0,
+          "found_locally": true
+        },
+        {
+          "field": "line_items[1].description",
+          "expected": "Common Area Maintenance (CAM)",
+          "found_locally": true
+        },
+        {
+          "field": "line_items[1].period",
+          "expected": "Sep-2026",
+          "found_locally": true
+        },
+        {
+          "field": "line_items[1].rate",
+          "expected": 30000.0,
+          "found_locally": true
+        },
+        {
+          "field": "line_items[1].amount",
+          "expected": 30000.0,
+          "found_locally": true
+        },
+        {
+          "field": "line_items[2].description",
+          "expected": "Fit-out Cost Recovery",
+          "found_locally": true
+        },
+        {
+          "field": "line_items[2].period",
+          "expected": "Sep-2026",
+          "found_locally": true
+        },
+        {
+          "field": "line_items[2].rate",
+          "expected": 5000.0,
+          "found_locally": true
+        },
+        {
+          "field": "line_items[2].amount",
+          "expected": 5000.0,
+          "found_locally": true
+        },
+        {
+          "field": "amounts.subtotal",
+          "expected": 185000.0,
+          "found_locally": true
+        },
+        {
+          "field": "amounts.tax.label",
+          "expected": "GST",
+          "found_locally": true
+        },
+        {
+          "field": "amounts.tax.amount",
+          "expected": 33300.0,
+          "found_locally": true
+        },
+        {
+          "field": "amounts.total_amount_due",
+          "expected": 218300.0,
+          "found_locally": true
+        },
+        {
+          "field": "amounts.currency",
+          "expected": "INR",
+          "found_locally": true
+        },
+        {
+          "field": "payment_instructions.bank",
+          "expected": "Example National Bank",
+          "found_locally": true
+        },
+        {
+          "field": "payment_instructions.account_name",
+          "expected": "ABC Properties Pvt. Ltd.",
+          "found_locally": true
+        },
+        {
+          "field": "payment_instructions.account_number",
+          "expected": "1234567890",
+          "found_locally": true
+        },
+        {
+          "field": "payment_instructions.ifsc_or_routing_code",
+          "expected": "EXMP0001234",
+          "found_locally": true
+        },
+        {
+          "field": "notes[0]",
+          "expected": "Synthetic invoice for AI workflow testing; no real payment information.",
+          "found_locally": true
+        }
+      ],
+      "text_chars": 2868,
+      "tables_detected": 2,
+      "parse_seconds": 0.381,
+      "raw_text": {
+        "pymupdf": "RENT INVOICE\nSample Invoice – AI Invoice Processing Demo\nInvoice Number\nINV-2026-09042\nInvoice Date\n01-Sep-2026\nBilling Period\nSeptember 2026\nLease ID\nLEASE-DEL-042\nPayment Due Date\n15-Sep-2026\nLANDLORD / BILL FROM\nABC Properties Pvt. Ltd.\n12 Business Park, Sector 18\nNew Delhi, India – 110001\nGSTIN: 07AABCA1234F1Z5\nEmail: billing@abcproperties.example\nBILL TO\nRetail Stores India Pvt. Ltd.\nFinance Department\nDelhi Mall – Store DEL-042\nNew Delhi, India\nCHARGES\nDescription\nPeriod\nQty\nRate (₹)\nAmount (₹)\nBase Rent\nSep-2026\n1\n150,000.00\n150,000.00\nCommon Area \nMaintenance (CAM)\nSep-2026\n1\n30,000.00\n30,000.00\nFit-out Cost Recovery\nSep-2026\n1\n5,000.00\n5,000.00\nSubtotal\n₹185,000.00\nGST @ 18%\n₹33,300.00\nTotal Amount Due\n₹218,300.00\nCurrency\nINR\nPayment Instructions\nBank: Example National Bank\nAccount Name: ABC Properties Pvt. Ltd.\nAccount Number: 1234567890\nIFSC: EXMP0001234\nNote: Synthetic invoice for AI workflow testing; no real payment information.",
+        "pdfplumber": "RENT INVOICE\nSample Invoice – AI Invoice Processing Demo\nInvoice Number INV-2026-09042\nInvoice Date 01-Sep-2026\nBilling Period September 2026\nLease ID LEASE-DEL-042\nPayment Due Date 15-Sep-2026\nLANDLORD / BILL FROM\nABC Properties Pvt. Ltd.\n12 Business Park, Sector 18\nNew Delhi, India – 110001\nGSTIN: 07AABCA1234F1Z5\nEmail: billing@abcproperties.example\nBILL TO\nRetail Stores India Pvt. Ltd.\nFinance Department\nDelhi Mall – Store DEL-042\nNew Delhi, India\nCHARGES\nDescription Period Qty Rate (₹) Amount (₹)\nBase Rent Sep-2026 1 150,000.00 150,000.00\nCommon Area Sep-2026 1 30,000.00 30,000.00\nMaintenance (CAM)\nFit-out Cost Recovery Sep-2026 1 5,000.00 5,000.00\nSubtotal ₹185,000.00\nGST @ 18% ₹33,300.00\nTotal Amount Due ₹218,300.00\nCurrency INR\nPayment Instructions\nBank: Example National Bank\nAccount Name: ABC Properties Pvt. Ltd.\nAccount Number: 1234567890\nIFSC: EXMP0001234\nNote: Synthetic invoice for AI workflow testing; no real payment information.",
+        "pypdf2": "RENT INVOICE\nSample Invoice – AI Invoice Processing Demo\nInvoice Number INV-2026-09042\nInvoice Date 01-Sep-2026\nBilling Period September 2026\nLease ID LEASE-DEL-042\nPayment Due Date 15-Sep-2026\nLANDLORD / BILL FROM\nABC Properties Pvt. Ltd.\n12 Business Park, Sector 18\nNew Delhi, India – 110001\nGSTIN: 07AABCA1234F1Z5\nEmail: billing@abcproperties.example\nBILL TO\nRetail Stores India Pvt. Ltd.\nFinance Department\nDelhi Mall – Store DEL-042\nNew Delhi, India\nCHARGES\nDescription Period Qty Rate (₹) Amount (₹)\nBase Rent Sep-2026 1 150,000.00 150,000.00\nCommon Area \nMaintenance (CAM)Sep-2026 1 30,000.00 30,000.00\nFit-out Cost Recovery Sep-2026 1 5,000.00 5,000.00\nSubtotal ₹185,000.00\nGST @ 18% ₹33,300.00\nTotal Amount Due ₹218,300.00\nCurrency INR\nPayment Instructions\nBank: Example National Bank\nAccount Name: ABC Properties Pvt. Ltd.\nAccount Number: 1234567890\nIFSC: EXMP0001234\nNote: Synthetic invoice for AI workflow testing; no real payment information."
+      },
+      "tables": [
+        [
+          [
+            "Invoice Number",
+            "INV-2026-09042"
+          ],
+          [
+            "Invoice Date",
+            "01-Sep-2026"
+          ],
+          [
+            "Billing Period",
+            "September 2026"
+          ],
+          [
+            "Lease ID",
+            "LEASE-DEL-042"
+          ],
+          [
+            "Payment Due Date",
+            "15-Sep-2026"
+          ]
+        ],
+        [
+          [
+            "Description",
+            "Period",
+            "Qty",
+            "",
+            "Rate (₹)",
+            "Amount (₹)"
+          ],
+          [
+            "Base Rent",
+            "Sep-2026",
+            "1",
+            "",
+            "150,000.00",
+            "150,000.00"
+          ],
+          [
+            "Common Area \nMaintenance (CAM)",
+            "Sep-2026",
+            "1",
+            "",
+            "30,000.00",
+            "30,000.00"
+          ],
+          [
+            "Fit-out Cost Recovery",
+            "Sep-2026",
+            "1",
+            "",
+            "5,000.00",
+            "5,000.00"
+          ],
+          [
+            "Subtotal",
+            "",
+            "",
+            "₹185,000.00",
+            "",
+            ""
+          ],
+          [
+            "GST @ 18%",
+            "",
+            "",
+            "₹33,300.00",
+            "",
+            ""
+          ],
+          [
+            "Total Amount Due",
+            "",
+            "",
+            "₹218,300.00",
+            "",
+            ""
+          ],
+          [
+            "Currency",
+            "",
+            "",
+            "INR",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
     "local_parser_then_llm": {
       "result": {
-        "invoice_number": "INV-2026-09042",
-        "invoice_date": "01-Sep-2026",
-        "due_date": "15-Sep-2026",
-        "billing_period": "September 2026",
-        "currency": "INR",
-        "subtotal": "185000.00",
-        "tax_amount": "33300.00",
-        "total": "218300.00",
-        "vendor_name": "ABC Properties Pvt. Ltd.",
+        "document_type": "RENT INVOICE",
+        "document_title": "Sample Invoice – AI Invoice Processing Demo",
+        "invoice": {
+          "invoice_number": "INV-2026-09042",
+          "invoice_date": "01-Sep-2026",
+          "billing_period": "September 2026",
+          "payment_due_date": "15-Sep-2026",
+          "lease_id": "LEASE-DEL-042",
+          "currency": "INR"
+        },
+        "seller": {
+          "name": "ABC Properties Pvt. Ltd.",
+          "address": "12 Business Park, Sector 18, New Delhi, India – 110001",
+          "tax_id": "07AABCA1234F1Z5",
+          "email": "billing@abcproperties.example"
+        },
+        "buyer": {
+          "name": "Retail Stores India Pvt. Ltd.",
+          "department": "Finance Department",
+          "location_or_store": "Delhi Mall – Store DEL-042",
+          "store_id": "DEL-042",
+          "address": "New Delhi, India"
+        },
         "line_items": [
           {
             "description": "Base Rent",
+            "period": "Sep-2026",
             "quantity": 1,
-            "unit_price": "150000.00",
-            "amount": "150000.00"
+            "rate": 150000.0,
+            "amount": 150000.0
           },
           {
             "description": "Common Area Maintenance (CAM)",
+            "period": "Sep-2026",
             "quantity": 1,
-            "unit_price": "30000.00",
-            "amount": "30000.00"
+            "rate": 30000.0,
+            "amount": 30000.0
           },
           {
             "description": "Fit-out Cost Recovery",
+            "period": "Sep-2026",
             "quantity": 1,
-            "unit_price": "5000.00",
-            "amount": "5000.00"
+            "rate": 5000.0,
+            "amount": 5000.0
           }
+        ],
+        "amounts": {
+          "subtotal": 185000.0,
+          "tax": {
+            "label": "GST @ 18%",
+            "rate_percent": 18,
+            "amount": 33300.0
+          },
+          "total_amount_due": 218300.0,
+          "currency": "INR"
+        },
+        "payment_instructions": {
+          "bank": "Example National Bank",
+          "account_name": "ABC Properties Pvt. Ltd.",
+          "account_number": "1234567890",
+          "ifsc_or_routing_code": "EXMP0001234"
+        },
+        "notes": [
+          "Synthetic invoice for AI workflow testing; no real payment information."
         ]
       },
-      "local_parse_seconds": 0.003,
-      "llm_seconds": 34.774,
-      "total_seconds": 34.777,
-      "field_accuracy": 100.0,
-      "line_items_correct": true,
-      "matched_fields": 9,
-      "total_fields": 9
+      "local_parse_seconds": 0.381,
+      "llm_seconds": 50.844,
+      "total_seconds": 51.224,
+      "field_accuracy": 97.67,
+      "matched_fields": 42,
+      "total_fields": 43,
+      "field_details": [
+        {
+          "field": "document_type",
+          "expected": "RENT INVOICE",
+          "actual": "RENT INVOICE",
+          "correct": true
+        },
+        {
+          "field": "document_title",
+          "expected": "Sample Invoice – AI Invoice Processing Demo",
+          "actual": "Sample Invoice – AI Invoice Processing Demo",
+          "correct": true
+        },
+        {
+          "field": "invoice.invoice_number",
+          "expected": "INV-2026-09042",
+          "actual": "INV-2026-09042",
+          "correct": true
+        },
+        {
+          "field": "invoice.invoice_date",
+          "expected": "01-Sep-2026",
+          "actual": "01-Sep-2026",
+          "correct": true
+        },
+        {
+          "field": "invoice.billing_period",
+          "expected": "September 2026",
+          "actual": "September 2026",
+          "correct": true
+        },
+        {
+          "field": "invoice.payment_due_date",
+          "expected": "15-Sep-2026",
+          "actual": "15-Sep-2026",
+          "correct": true
+        },
+        {
+          "field": "invoice.lease_id",
+          "expected": "LEASE-DEL-042",
+          "actual": "LEASE-DEL-042",
+          "correct": true
+        },
+        {
+          "field": "invoice.currency",
+          "expected": "INR",
+          "actual": "INR",
+          "correct": true
+        },
+        {
+          "field": "seller.name",
+          "expected": "ABC Properties Pvt. Ltd.",
+          "actual": "ABC Properties Pvt. Ltd.",
+          "correct": true
+        },
+        {
+          "field": "seller.address",
+          "expected": "12 Business Park, Sector 18\nNew Delhi, India – 110001",
+          "actual": "12 Business Park, Sector 18, New Delhi, India – 110001",
+          "correct": true
+        },
+        {
+          "field": "seller.tax_id",
+          "expected": "07AABCA1234F1Z5",
+          "actual": "07AABCA1234F1Z5",
+          "correct": true
+        },
+        {
+          "field": "seller.email",
+          "expected": "billing@abcproperties.example",
+          "actual": "billing@abcproperties.example",
+          "correct": true
+        },
+        {
+          "field": "buyer.name",
+          "expected": "Retail Stores India Pvt. Ltd.",
+          "actual": "Retail Stores India Pvt. Ltd.",
+          "correct": true
+        },
+        {
+          "field": "buyer.department",
+          "expected": "Finance Department",
+          "actual": "Finance Department",
+          "correct": true
+        },
+        {
+          "field": "buyer.location_or_store",
+          "expected": "Delhi Mall – Store DEL-042",
+          "actual": "Delhi Mall – Store DEL-042",
+          "correct": true
+        },
+        {
+          "field": "buyer.store_id",
+          "expected": "DEL-042",
+          "actual": "DEL-042",
+          "correct": true
+        },
+        {
+          "field": "buyer.address",
+          "expected": "New Delhi, India",
+          "actual": "New Delhi, India",
+          "correct": true
+        },
+        {
+          "field": "line_items[0].description",
+          "expected": "Base Rent",
+          "actual": "Base Rent",
+          "correct": true
+        },
+        {
+          "field": "line_items[0].period",
+          "expected": "Sep-2026",
+          "actual": "Sep-2026",
+          "correct": true
+        },
+        {
+          "field": "line_items[0].quantity",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "line_items[0].rate",
+          "expected": 150000.0,
+          "actual": 150000.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[0].amount",
+          "expected": 150000.0,
+          "actual": 150000.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[1].description",
+          "expected": "Common Area Maintenance (CAM)",
+          "actual": "Common Area Maintenance (CAM)",
+          "correct": true
+        },
+        {
+          "field": "line_items[1].period",
+          "expected": "Sep-2026",
+          "actual": "Sep-2026",
+          "correct": true
+        },
+        {
+          "field": "line_items[1].quantity",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "line_items[1].rate",
+          "expected": 30000.0,
+          "actual": 30000.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[1].amount",
+          "expected": 30000.0,
+          "actual": 30000.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[2].description",
+          "expected": "Fit-out Cost Recovery",
+          "actual": "Fit-out Cost Recovery",
+          "correct": true
+        },
+        {
+          "field": "line_items[2].period",
+          "expected": "Sep-2026",
+          "actual": "Sep-2026",
+          "correct": true
+        },
+        {
+          "field": "line_items[2].quantity",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "line_items[2].rate",
+          "expected": 5000.0,
+          "actual": 5000.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[2].amount",
+          "expected": 5000.0,
+          "actual": 5000.0,
+          "correct": true
+        },
+        {
+          "field": "amounts.subtotal",
+          "expected": 185000.0,
+          "actual": 185000.0,
+          "correct": true
+        },
+        {
+          "field": "amounts.tax.label",
+          "expected": "GST",
+          "actual": "GST @ 18%",
+          "correct": false
+        },
+        {
+          "field": "amounts.tax.rate_percent",
+          "expected": 18,
+          "actual": 18,
+          "correct": true
+        },
+        {
+          "field": "amounts.tax.amount",
+          "expected": 33300.0,
+          "actual": 33300.0,
+          "correct": true
+        },
+        {
+          "field": "amounts.total_amount_due",
+          "expected": 218300.0,
+          "actual": 218300.0,
+          "correct": true
+        },
+        {
+          "field": "amounts.currency",
+          "expected": "INR",
+          "actual": "INR",
+          "correct": true
+        },
+        {
+          "field": "payment_instructions.bank",
+          "expected": "Example National Bank",
+          "actual": "Example National Bank",
+          "correct": true
+        },
+        {
+          "field": "payment_instructions.account_name",
+          "expected": "ABC Properties Pvt. Ltd.",
+          "actual": "ABC Properties Pvt. Ltd.",
+          "correct": true
+        },
+        {
+          "field": "payment_instructions.account_number",
+          "expected": "1234567890",
+          "actual": "1234567890",
+          "correct": true
+        },
+        {
+          "field": "payment_instructions.ifsc_or_routing_code",
+          "expected": "EXMP0001234",
+          "actual": "EXMP0001234",
+          "correct": true
+        },
+        {
+          "field": "notes[0]",
+          "expected": "Synthetic invoice for AI workflow testing; no real payment information.",
+          "actual": "Synthetic invoice for AI workflow testing; no real payment information.",
+          "correct": true
+        }
+      ]
     },
     "direct_vision_llm": {
       "result": {
-        "invoice_number": "INV-2026-09042",
-        "invoice_date": "01-Sep-2026",
-        "due_date": "15-Sep-2026",
-        "billing_period": "September 2026",
-        "currency": "INR",
-        "subtotal": "185000.00",
-        "tax_amount": "33300.00",
-        "total": "218300.00",
-        "vendor_name": "ABC Properties Pvt. Ltd.",
+        "document_type": "RENT INVOICE",
+        "document_title": "RENT INVOICE",
+        "invoice": {
+          "invoice_number": "INV-2026-09042",
+          "invoice_date": "01-Sep-2026",
+          "billing_period": "September 2026",
+          "payment_due_date": "15-Sep-2026",
+          "lease_id": "LEASE-DEL-042",
+          "currency": "INR"
+        },
+        "seller": {
+          "name": "ABC Properties Pvt. Ltd.",
+          "address": "12 Business Park, Sector 18, New Delhi, India - 110001",
+          "tax_id": "07AABCA1234F1Z5",
+          "email": "billing@abcproperties.example"
+        },
+        "buyer": {
+          "name": "Retail Stores India Pvt. Ltd.",
+          "department": "Finance Department",
+          "location_or_store": "Delhi Mall – Store DEL-042",
+          "store_id": "DEL-042",
+          "address": "New Delhi, India"
+        },
         "line_items": [
           {
             "description": "Base Rent",
+            "period": "Sep-2026",
             "quantity": 1,
-            "unit_price": "150000.00",
-            "amount": "150000.00"
+            "rate": 150000.0,
+            "amount": 150000.0
           },
           {
             "description": "Common Area Maintenance (CAM)",
+            "period": "Sep-2026",
             "quantity": 1,
-            "unit_price": "30000.00",
-            "amount": "30000.00"
+            "rate": 30000.0,
+            "amount": 30000.0
           },
           {
             "description": "Fit-out Cost Recovery",
+            "period": "Sep-2026",
             "quantity": 1,
-            "unit_price": "5000.00",
-            "amount": "5000.00"
+            "rate": 5000.0,
+            "amount": 5000.0
           }
+        ],
+        "amounts": {
+          "subtotal": 185000.0,
+          "tax": {
+            "label": "GST @ 18%",
+            "rate_percent": 18,
+            "amount": 33300.0
+          },
+          "total_amount_due": 218300.0,
+          "currency": "INR"
+        },
+        "payment_instructions": {
+          "bank": "Example National Bank",
+          "account_name": "ABC Properties Pvt. Ltd.",
+          "account_number": "1234567890",
+          "ifsc_or_routing_code": "EXMP0001234"
+        },
+        "notes": [
+          "Synthetic invoice for AI workflow testing; no real payment information."
         ]
       },
-      "total_seconds": 1.06,
-      "field_accuracy": 100.0,
-      "line_items_correct": true,
-      "matched_fields": 9,
-      "total_fields": 9
+      "total_seconds": 32.931,
+      "field_accuracy": 95.35,
+      "matched_fields": 41,
+      "total_fields": 43,
+      "field_details": [
+        {
+          "field": "document_type",
+          "expected": "RENT INVOICE",
+          "actual": "RENT INVOICE",
+          "correct": true
+        },
+        {
+          "field": "document_title",
+          "expected": "Sample Invoice – AI Invoice Processing Demo",
+          "actual": "RENT INVOICE",
+          "correct": false
+        },
+        {
+          "field": "invoice.invoice_number",
+          "expected": "INV-2026-09042",
+          "actual": "INV-2026-09042",
+          "correct": true
+        },
+        {
+          "field": "invoice.invoice_date",
+          "expected": "01-Sep-2026",
+          "actual": "01-Sep-2026",
+          "correct": true
+        },
+        {
+          "field": "invoice.billing_period",
+          "expected": "September 2026",
+          "actual": "September 2026",
+          "correct": true
+        },
+        {
+          "field": "invoice.payment_due_date",
+          "expected": "15-Sep-2026",
+          "actual": "15-Sep-2026",
+          "correct": true
+        },
+        {
+          "field": "invoice.lease_id",
+          "expected": "LEASE-DEL-042",
+          "actual": "LEASE-DEL-042",
+          "correct": true
+        },
+        {
+          "field": "invoice.currency",
+          "expected": "INR",
+          "actual": "INR",
+          "correct": true
+        },
+        {
+          "field": "seller.name",
+          "expected": "ABC Properties Pvt. Ltd.",
+          "actual": "ABC Properties Pvt. Ltd.",
+          "correct": true
+        },
+        {
+          "field": "seller.address",
+          "expected": "12 Business Park, Sector 18\nNew Delhi, India – 110001",
+          "actual": "12 Business Park, Sector 18, New Delhi, India - 110001",
+          "correct": true
+        },
+        {
+          "field": "seller.tax_id",
+          "expected": "07AABCA1234F1Z5",
+          "actual": "07AABCA1234F1Z5",
+          "correct": true
+        },
+        {
+          "field": "seller.email",
+          "expected": "billing@abcproperties.example",
+          "actual": "billing@abcproperties.example",
+          "correct": true
+        },
+        {
+          "field": "buyer.name",
+          "expected": "Retail Stores India Pvt. Ltd.",
+          "actual": "Retail Stores India Pvt. Ltd.",
+          "correct": true
+        },
+        {
+          "field": "buyer.department",
+          "expected": "Finance Department",
+          "actual": "Finance Department",
+          "correct": true
+        },
+        {
+          "field": "buyer.location_or_store",
+          "expected": "Delhi Mall – Store DEL-042",
+          "actual": "Delhi Mall – Store DEL-042",
+          "correct": true
+        },
+        {
+          "field": "buyer.store_id",
+          "expected": "DEL-042",
+          "actual": "DEL-042",
+          "correct": true
+        },
+        {
+          "field": "buyer.address",
+          "expected": "New Delhi, India",
+          "actual": "New Delhi, India",
+          "correct": true
+        },
+        {
+          "field": "line_items[0].description",
+          "expected": "Base Rent",
+          "actual": "Base Rent",
+          "correct": true
+        },
+        {
+          "field": "line_items[0].period",
+          "expected": "Sep-2026",
+          "actual": "Sep-2026",
+          "correct": true
+        },
+        {
+          "field": "line_items[0].quantity",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "line_items[0].rate",
+          "expected": 150000.0,
+          "actual": 150000.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[0].amount",
+          "expected": 150000.0,
+          "actual": 150000.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[1].description",
+          "expected": "Common Area Maintenance (CAM)",
+          "actual": "Common Area Maintenance (CAM)",
+          "correct": true
+        },
+        {
+          "field": "line_items[1].period",
+          "expected": "Sep-2026",
+          "actual": "Sep-2026",
+          "correct": true
+        },
+        {
+          "field": "line_items[1].quantity",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "line_items[1].rate",
+          "expected": 30000.0,
+          "actual": 30000.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[1].amount",
+          "expected": 30000.0,
+          "actual": 30000.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[2].description",
+          "expected": "Fit-out Cost Recovery",
+          "actual": "Fit-out Cost Recovery",
+          "correct": true
+        },
+        {
+          "field": "line_items[2].period",
+          "expected": "Sep-2026",
+          "actual": "Sep-2026",
+          "correct": true
+        },
+        {
+          "field": "line_items[2].quantity",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "line_items[2].rate",
+          "expected": 5000.0,
+          "actual": 5000.0,
+          "correct": true
+        },
+        {
+          "field": "line_items[2].amount",
+          "expected": 5000.0,
+          "actual": 5000.0,
+          "correct": true
+        },
+        {
+          "field": "amounts.subtotal",
+          "expected": 185000.0,
+          "actual": 185000.0,
+          "correct": true
+        },
+        {
+          "field": "amounts.tax.label",
+          "expected": "GST",
+          "actual": "GST @ 18%",
+          "correct": false
+        },
+        {
+          "field": "amounts.tax.rate_percent",
+          "expected": 18,
+          "actual": 18,
+          "correct": true
+        },
+        {
+          "field": "amounts.tax.amount",
+          "expected": 33300.0,
+          "actual": 33300.0,
+          "correct": true
+        },
+        {
+          "field": "amounts.total_amount_due",
+          "expected": 218300.0,
+          "actual": 218300.0,
+          "correct": true
+        },
+        {
+          "field": "amounts.currency",
+          "expected": "INR",
+          "actual": "INR",
+          "correct": true
+        },
+        {
+          "field": "payment_instructions.bank",
+          "expected": "Example National Bank",
+          "actual": "Example National Bank",
+          "correct": true
+        },
+        {
+          "field": "payment_instructions.account_name",
+          "expected": "ABC Properties Pvt. Ltd.",
+          "actual": "ABC Properties Pvt. Ltd.",
+          "correct": true
+        },
+        {
+          "field": "payment_instructions.account_number",
+          "expected": "1234567890",
+          "actual": "1234567890",
+          "correct": true
+        },
+        {
+          "field": "payment_instructions.ifsc_or_routing_code",
+          "expected": "EXMP0001234",
+          "actual": "EXMP0001234",
+          "correct": true
+        },
+        {
+          "field": "notes[0]",
+          "expected": "Synthetic invoice for AI workflow testing; no real payment information.",
+          "actual": "Synthetic invoice for AI workflow testing; no real payment information.",
+          "correct": true
+        }
+      ]
     }
   }
 }
