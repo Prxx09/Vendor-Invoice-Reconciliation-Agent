@@ -7,6 +7,8 @@ Extract the maximum information explicitly present in the document and return ON
 
 Rules:
 - Never invent, infer, calculate, normalize away, or silently correct a value that is not explicitly supported by the document.
+- CRITICAL: Do not derive dates from payment terms. If the document says "Payment within 30 days" but does not print an explicit due date, payment_due_date MUST be null and payment_terms must contain the printed term.
+- payment_due_date may only contain a date explicitly printed/labeled as a due/payment due date in the source document.
 - Preserve identifiers, dates, addresses, emails, bank details, tax IDs, lease/store IDs, notes, currency and charge descriptions.
 - Every monetary figure visible in the document must be represented in the JSON in a semantically appropriate field.
 - For every charge preserve description, period, quantity, rate and amount when present.
@@ -26,6 +28,7 @@ Return this structure:
     "invoice_date": null,
     "billing_period": null,
     "payment_due_date": null,
+    "payment_terms": null,
     "lease_id": null,
     "currency": null
   },
