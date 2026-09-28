@@ -1,0 +1,25 @@
+name: Invoice approach comparison
+on:
+  workflow_dispatch:
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      GROQ_TEXT_MODEL: llama-3.3-70b-versatile
+      GROQ_VISION_MODEL: meta-llama/llama-4-scout-17b-16e-instruct
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/pdf-extraction-poc
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Run same-schema benchmark
+        run: python comparison/benchmark.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: approach-comparison-results
+          path: benchmark-results.json
