@@ -52,13 +52,18 @@ def main():
         pdf=Path("tests/fixtures")/name
         start=time.perf_counter(); parsed=extract_all(pdf); local_s=time.perf_counter()-start
         text=max((parsed[k] for k in ("pymupdf","pdfplumber","pypdf2")),key=len)
-        a,llm_s=groq_text(text)
-        b,vision_s=groq_vision(pdf)
-        out[name]={
-          "local_parser_then_llm":{"result":a,"local_parse_seconds":round(local_s,3),"llm_seconds":round(llm_s,3),
-             "total_seconds":round(local_s+llm_s,3),**score(a,gt)},
-          "direct_vision_llm":{"result":b,"total_seconds":round(vision_s,3),**score(b,gt)}
-        }
+        out[name]={}
+        try:
+            a,llm_s=groq_text(text)
+            out[name]["local_parser_then_llm"]={"result":a,"local_parse_seconds":round(local_s,3),
+              "llm_seconds":round(llm_s,3),"total_seconds":round(local_s+llm_s,3),**score(a,gt)}
+        except Exception as e:
+            out[name]["local_parser_then_llm"]={"error":repr(e),"local_parse_seconds":round(local_s,3)}
+        try:
+            b,vision_s=groq_vision(pdf)
+            out[name]["direct_vision_llm"]={"result":b,"total_seconds":round(vision_s,3),**score(b,gt)}
+        except Exception as e:
+            out[name]["direct_vision_llm"]={"error":repr(e)}
     Path("benchmark-results.json").write_text(json.dumps(out,indent=2))
     print(json.dumps(out,indent=2))
 if __name__=="__main__": main()
