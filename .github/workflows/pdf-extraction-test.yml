@@ -24,4 +24,6 @@ jobs:
         run: |
           test -n "$(find tests/fixtures -maxdepth 1 -name '*.pdf' -print -quit)" || (echo "Upload the two PDFs to tests/fixtures/" && exit 1)
       - name: Run extraction and LLM tests
-        run: pytest -v
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: python -m pytest -v
