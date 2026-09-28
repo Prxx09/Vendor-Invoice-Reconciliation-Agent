@@ -26,4 +26,11 @@ jobs:
       - name: Run extraction and LLM tests
         env:
           PYTHONPATH: ${{ github.workspace }}
-        run: python -m pytest -v
+        run: python -m pytest -v -s
+      - name: Upload parsed invoice results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: parsed-invoice-results
+          path: test-output/*.json
+          if-no-files-found: warn
