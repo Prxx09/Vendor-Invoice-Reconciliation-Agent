@@ -27,7 +27,7 @@ def validate_schema(data):
     assert REQUIRED.issubset(data)
     assert {
         "invoice_number", "invoice_date", "billing_period",
-        "payment_due_date", "lease_id", "currency"
+        "payment_due_date", "payment_terms", "lease_id", "currency"
     }.issubset(data["invoice"])
     assert {"subtotal", "tax", "total_amount_due", "currency"}.issubset(data["amounts"])
     assert {"label", "rate_percent", "amount"}.issubset(data["amounts"]["tax"])
